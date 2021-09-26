@@ -4,7 +4,7 @@ from flask_moment import Moment
 from datetime import datetime
 from flask_wtf import Form
 from wtforms import StringField, SubmitField 
-from wtforms.validators import Required
+from wtforms.validators import Required, Email
 
 app = Flask(__name__, template_folder='app/templates')
 app.config['SECRET_KEY'] = 'hard to guess string'
@@ -13,6 +13,7 @@ moment = Moment(app)
 
 class NameForm(Form):
 	name = StringField('What is your name?', validators=[Required()])
+	email = StringField('What is your UofT email address?', validators=[Required(),Email(message="Please include an \'@\' in the email address.")])
 	submit = SubmitField('Submit')
 
 @app.route('/', methods=['GET', 'POST'])
@@ -22,10 +23,15 @@ def index():
 		old_name = session.get('name')
 		if old_name is not None and old_name != form.name.data:
 			flash('Looks like you have changed your name!')
+		if "@utoronto.ca" not in form.email.data and "@mail.utoronto.ca" not in form.email.data:
+			flash('Looks like you have changed your email!')
+			session['email'] = "not_uoft_email"
+		else:
+			session['email'] = form.email.data
 		session['name'] = form.name.data
 		return redirect(url_for('index'))
-	return render_template('index.html', form=form, name=session.get('name')) 
-
+	return render_template('index.html', form=form, name=session.get('name'), email=session.get('email')) 
+	
 @app.route('/user/<name>')
 def user(name):
 	return render_template('user.html', name=name, current_time=datetime.utcnow())
