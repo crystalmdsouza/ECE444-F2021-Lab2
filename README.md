@@ -1,6 +1,27 @@
 Hi! I'm Crystal D'Souza. This repo is a clone of
 https://github.com/miguelgrinberg/flasky used for ECE444 Software Engineering at the University of Toronto.
 
+Here are my screenshots for the lab documentation.
+
+Part 1:
+
+![alt text](https://github.com/crystalmdsouza/ECE444-F2021-Lab2/blob/master/lab2_activity1_image1.png?raw=true)
+
+Part 2:
+
+![alt text](https://github.com/crystalmdsouza/ECE444-F2021-Lab2/blob/master/lab2_activity2_image1.png?raw=true)
+
+Part 3:
+
+![alt text](https://github.com/crystalmdsouza/ECE444-F2021-Lab2/blob/master/lab2_activity3_image1.png?raw=true)
+
+Part 4:
+
+![alt text](https://github.com/crystalmdsouza/ECE444-F2021-Lab2/blob/master/lab2_activity4_image1.png?raw=true)
+![alt text](https://github.com/crystalmdsouza/ECE444-F2021-Lab2/blob/master/lab2_activity4_image2.png?raw=true)
+![alt text](https://github.com/crystalmdsouza/ECE444-F2021-Lab2/blob/master/lab2_activity4_image3.png?raw=true)
+![alt text](https://github.com/crystalmdsouza/ECE444-F2021-Lab2/blob/master/lab2_activity4_image4.png?raw=true)
+
 Flasky
 ======
 
